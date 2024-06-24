@@ -19,7 +19,7 @@ TEST_SERVER_URLS = {
 QUALIFIED_IDS = {"0": "prime", "1": "fibonacci", "2": "even", "3": "random"}
 window = []
 
-# Get the access token from the environment variables
+
 ACCESS_TOKEN = os.getenv('ACCESS_TOKEN')
 
 def fetch_numbers(qualifier):
