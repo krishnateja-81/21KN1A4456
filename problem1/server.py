@@ -1,10 +1,7 @@
 from flask import Flask, request, jsonify
 import requests
 import time
-from dotenv import load_dotenv
 import os
-
-load_dotenv()
 
 app = Flask(__name__)
 
@@ -20,7 +17,7 @@ QUALIFIED_IDS = {"0": "prime", "1": "fibonacci", "2": "even", "3": "random"}
 window = []
 
 
-ACCESS_TOKEN = os.getenv('ACCESS_TOKEN')
+ACCESS_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYXBDbGFpbXMiOnsiZXhwIjoxNzE5MjE0NTgxLCJpYXQiOjE3MTkyMTQyODEsImlzcyI6IkFmZm9yZG1lZCIsImp0aSI6ImIyNGViNGI4LTlmN2MtNGU3Ny05NDkzLThhYzFmMmEwZWNkMyIsInN1YiI6ImtyaXNobmF0ZWphc2lydmlzZXR0aUBnbWFpbC5jb20ifSwiY29tcGFueU5hbWUiOiJhZmZvcmRtZWQiLCJjbGllbnRJRCI6ImIyNGViNGI4LTlmN2MtNGU3Ny05NDkzLThhYzFmMmEwZWNkMyIsImNsaWVudFNlY3JldCI6IlBvQXBWa0NQa1l1cUdQb0UiLCJvd25lck5hbWUiOiJTaXJ2aXNldHRpIEtyaXNobmEgVGVqYSIsIm93bmVyRW1haWwiOiJrcmlzaG5hdGVqYXNpcnZpc2V0dGlAZ21haWwuY29tIiwicm9sbE5vIjoiMjFLTjFBNDQ1NiJ9.h4gdhMG06bAayJDkKOMJkz1Qy5MmeFZVwSo9KjJwYoM"
 
 def fetch_numbers(qualifier):
     url = TEST_SERVER_URLS[qualifier]
